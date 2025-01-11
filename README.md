@@ -27,7 +27,7 @@ Kullanıcı arayüzü ise dinamik ve şık bir tasarıma sahiptir.
 <img width="1463" alt="Ekran Resmi 2025-01-11 12 19 22" src="https://github.com/user-attachments/assets/d0a80c9d-c3f8-4987-ad7c-455f935d222a" />
 </br>
 <br>
-<img width="1470" alt="Ekran Resmi 2025-01-11 12 19 58" src="https://github.com/user-attachments/assets/d17e7179-9790-4499-9295-78c4356bd8e4" />
+<img width="1470" alt="Ekran Resmi 2025-01-11 13 54 50" src="https://github.com/user-attachments/assets/e51b854d-afcf-446e-b3f9-585432f569ae" />
 </br>
 <br>
 <img width="1470" alt="Ekran Resmi 2025-01-11 12 20 23" src="https://github.com/user-attachments/assets/dc2e748c-295c-4fc3-b3bd-f8969d22110b" />
