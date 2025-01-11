@@ -1,4 +1,4 @@
-# :EMOJICODE🥇 Admin Panelli Portfolyo Projesi
+# :EMOJICODE:🥇 Admin Panelli Portfolyo Projesi
 
 ### Projenin İçeriği ve Genel Bakış
 Admin paneli crud işlemlerine sahiptir.Ayrıca kolay ve kullanışlı tasarımıylada bu panelden işlemler rahatça gerçekleştirilir.Aşağıda kullandığım Database tablolarım bulunmaktadır.
