@@ -1,0 +1,32 @@
+﻿@model List<AcunMedyaAkademiPortfolyo.Models.TblAbaout>
+@{
+    ViewBag.Title = "AbaoutList";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2>Hakkımda</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>Hakkımda Id</th>
+        <th>Başlık</th>
+        <th>Açıklama</th>
+        <th>Resim Yolu</th>
+    </tr>
+
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.AboutID</td>
+            <td>@item.Title</td>
+            <td>@item.Description</td>
+            <td>@item.ImageUrl</td>
+            <td><a href="/Abaout/DeleteAbaout/@item.AboutID" class="btn btn-danger">Sil</a></td>
+            <td><a href="#" class="btn btn-success">Güncelle</a></td>
+        </tr>
+    }
+</table>
+<a href="/Abaout/CreateAbaout/" class="btn btn-primary">Yeni Hakkımda Girişi</a>
+
+

@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewBag.Title = "CreateContact";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2>CreateContact</h2>
+<form method="post">
+    <label>İsim Soyisim</label>
+    <input type="text" class="table table-bordered" name="NameSurname" />
+    <br />
+    <label>Mailiniz</label>
+    <input type="email" class="table table-bordered" name="Email" />
+    <br />
+    <label>Telefon</label>
+    <input type="tel" class="table table-bordered" name="Phone" />
+    <br />
+    <label>Mesaj</label>
+    <input type="text" class="table table-bordered" name="Message" />
+    <br />
+    <label>Tarih</label>
+    <input type="date" class="table table-bordered" name="SendDate" />
+    <br />
+  
+    <button class="btn btn-info">Mesajı Kaydet</button>
+</form>
+

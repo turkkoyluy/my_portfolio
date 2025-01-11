@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DbDıomincPortfolioModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="TblCategory">
+    <Key>
+      <PropertyRef Name="CategoryID" />
+    </Key>
+    <Property Name="CategoryID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CategoryName" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="TblProject" Relationship="Self.FK_TblProject_TblCategory" FromRole="TblCategory" ToRole="TblProject" />
+  </EntityType>
+  <EntityType Name="TblProject">
+    <Key>
+      <PropertyRef Name="ProjectID" />
+    </Key>
+    <Property Name="ProjectID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Descripton" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ImageUrl" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CategoryId" Type="Int32" />
+    <NavigationProperty Name="TblCategory" Relationship="Self.FK_TblProject_TblCategory" FromRole="TblProject" ToRole="TblCategory" />
+  </EntityType>
+  <EntityType Name="TblFeature">
+    <Key>
+      <PropertyRef Name="FeatureName" />
+    </Key>
+    <Property Name="FeatureName" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NameSurname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ProjectName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ImageUrl" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <Association Name="FK_TblProject_TblCategory">
+    <End Role="TblCategory" Type="Self.TblCategory" Multiplicity="0..1" />
+    <End Role="TblProject" Type="Self.TblProject" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblCategory">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="TblProject">
+        <PropertyRef Name="CategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DbDıomincPortfolioEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <EntitySet Name="TblCategory" EntityType="Self.TblCategory" />
+    <EntitySet Name="TblProject" EntityType="Self.TblProject" />
+    <EntitySet Name="TblFeature" EntityType="Self.TblFeature" />
+    <AssociationSet Name="FK_TblProject_TblCategory" Association="Self.FK_TblProject_TblCategory">
+      <End Role="TblCategory" EntitySet="TblCategory" />
+      <End Role="TblProject" EntitySet="TblProject" />
+    </AssociationSet>
+    <EntitySet Name="TblAbaout" EntityType="DbDıomincPortfolioModel.TblAbaout" />
+    <EntitySet Name="TblService" EntityType="DbDıomincPortfolioModel.TblService" />
+    <EntitySet Name="TblTesrimonial" EntityType="DbDıomincPortfolioModel.TblTesrimonial" />
+    <EntitySet Name="TblContact" EntityType="DbDıomincPortfolioModel.TblContact" />
+    <EntitySet Name="TblHighlights" EntityType="DbDıomincPortfolioModel.TblHighlights" />
+  </EntityContainer>
+  <EntityType Name="TblAbaout">
+    <Key>
+      <PropertyRef Name="AboutID" />
+    </Key>
+    <Property Name="AboutID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ImageUrl" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TblService">
+    <Key>
+      <PropertyRef Name="ServicesID" />
+    </Key>
+    <Property Name="ServicesID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ImageUrl" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TblTesrimonial">
+    <Key>
+      <PropertyRef Name="TesrimonialID" />
+    </Key>
+    <Property Name="TesrimonialID" Type="Int32" Nullable="false" />
+    <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="NameSurname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ImageUrl" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Job" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="TblContact">
+    <Key>
+      <PropertyRef Name="ContactId" />
+    </Key>
+    <Property Name="ContactId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NameSurname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Phone" Type="String" MaxLength="11" FixedLength="true" Unicode="false" />
+    <Property Name="Message" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SendDate" Type="DateTime" Precision="0" />
+    <Property Name="IsRead" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="TblHighlights">
+    <Key>
+      <PropertyRef Name="HighlightsId" />
+    </Key>
+    <Property Name="HighlightsId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="HighlightsName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+</Schema>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="8328c75a43ad4fde8c4b4b4e965871bd" Name="Diagram1" ZoomLevel="71">
+        <EntityTypeShape EntityType="DbDıomincPortfolioModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbDıomincPortfolioModel.TblCategory" Width="1.5" PointX="0.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbDıomincPortfolioModel.TblProject" Width="1.5" PointX="3" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbDıomincPortfolioModel.TblFeature" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
+        <AssociationConnector Association="DbDıomincPortfolioModel.FK_TblProject_TblCategory" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="DbDıomincPortfolioModel.TblAbaout" Width="1.5" PointX="5.75" PointY="0.75" />
+        <EntityTypeShape EntityType="DbDıomincPortfolioModel.TblService" Width="1.5" PointX="0.75" PointY="6.75" />
+        <EntityTypeShape EntityType="DbDıomincPortfolioModel.TblTesrimonial" Width="1.5" PointX="5.375" PointY="3.75" />
+        <EntityTypeShape EntityType="DbDıomincPortfolioModel.TblContact" Width="1.5" PointX="7.375" PointY="3.75" />
+        <EntityTypeShape EntityType="DbDıomincPortfolioModel.TblHighlights" Width="1.5" PointX="3.375" PointY="7.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

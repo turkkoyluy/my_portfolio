@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DbDıomincPortfolioModelStoreContainer" CdmEntityContainer="DbDıomincPortfolioEntities">
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="DbDıomincPortfolioModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblCategory">
+      <EntityTypeMapping TypeName="DbDıomincPortfolioModel.TblCategory">
+        <MappingFragment StoreEntitySet="TblCategory">
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblProject">
+      <EntityTypeMapping TypeName="DbDıomincPortfolioModel.TblProject">
+        <MappingFragment StoreEntitySet="TblProject">
+          <ScalarProperty Name="ProjectID" ColumnName="ProjectID" />
+          <ScalarProperty Name="Descripton" ColumnName="Descripton" />
+          <ScalarProperty Name="ImageUrl" ColumnName="ImageUrl" />
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblFeature">
+      <EntityTypeMapping TypeName="DbDıomincPortfolioModel.TblFeature">
+        <MappingFragment StoreEntitySet="TblFeature">
+          <ScalarProperty Name="FeatureName" ColumnName="FeatureName" />
+          <ScalarProperty Name="NameSurname" ColumnName="NameSurname" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
+          <ScalarProperty Name="ImageUrl" ColumnName="ImageUrl" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblAbaout">
+      <EntityTypeMapping TypeName="DbDıomincPortfolioModel.TblAbaout">
+        <MappingFragment StoreEntitySet="TblAbaout">
+          <ScalarProperty Name="ImageUrl" ColumnName="ImageUrl" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="AboutID" ColumnName="AboutID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblService">
+      <EntityTypeMapping TypeName="DbDıomincPortfolioModel.TblService">
+        <MappingFragment StoreEntitySet="TblService">
+          <ScalarProperty Name="ImageUrl" ColumnName="ImageUrl" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="ServicesID" ColumnName="ServicesID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblTesrimonial">
+      <EntityTypeMapping TypeName="DbDıomincPortfolioModel.TblTesrimonial">
+        <MappingFragment StoreEntitySet="TblTesrimonial">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Job" ColumnName="Job" />
+          <ScalarProperty Name="ImageUrl" ColumnName="ImageUrl" />
+          <ScalarProperty Name="NameSurname" ColumnName="NameSurname" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="TesrimonialID" ColumnName="TesrimonialID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblContact">
+      <EntityTypeMapping TypeName="DbDıomincPortfolioModel.TblContact">
+        <MappingFragment StoreEntitySet="TblContact">
+          <ScalarProperty Name="IsRead" ColumnName="IsRead" />
+          <ScalarProperty Name="SendDate" ColumnName="SendDate" />
+          <ScalarProperty Name="Message" ColumnName="Message" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="NameSurname" ColumnName="NameSurname" />
+          <ScalarProperty Name="ContactId" ColumnName="ContactId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblHighlights">
+      <EntityTypeMapping TypeName="DbDıomincPortfolioModel.TblHighlights">
+        <MappingFragment StoreEntitySet="TblHighlights">
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="HighlightsName" ColumnName="HighlightsName" />
+          <ScalarProperty Name="HighlightsId" ColumnName="HighlightsId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
