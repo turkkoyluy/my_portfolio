@@ -1,7 +1,7 @@
-# 🥇Admin Panelli Portfolyo Projesi
+ # 🥇Admin Panelli Portfolyo Projesi
 
 ### Projenin İçeriği ve Genel Bakış
-Admin paneli crud işlemlerine sahiptir.Ayrıca kolay ve kullanışlı tasarımıylada bu panelden işlemler rahatça gerçekleştirilir.Aşağıda kullandığım Database tablolarım bulunmaktadır.
+Admin paneli crud işlemlerine sahiptir.Ayrıca kolay ve kullanışlı tasarımıyla da bu panelden işlemler rahatça gerçekleştirilir.Aşağıda kullandığım Database tablolarım bulunmaktadır.
 Kullanıcı arayüzü ise dinamik ve şık bir tasarıma sahiptir.
 
 ### Kullanılan Teknojiler ve Uygulamalar 
